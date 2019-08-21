@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce-node-react",
+  "version": "1.0.0",
+  "description": "React ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdelsalam-Megahed/ecommerce-Node-React.git"
+  },
+  "author": "Abdelsalam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdelsalam-Megahed/ecommerce-Node-React/issues"
+  },
+  "homepage": "https://github.com/Abdelsalam-Megahed/ecommerce-Node-React#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.10",
+    "nodemon": "^1.19.1"
+  }
+}
