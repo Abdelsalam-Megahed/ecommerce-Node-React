@@ -57,3 +57,24 @@ exports.requireSignin = expressJwt({
     secret: 'HFGMFEKFMREFRIVNR',
     userProperty: 'auth'
 })
+
+exports.isAuth = (req, res, next) => {
+    let user = req.profile && req.auth && req.profile._id == req.auth._id;
+    if(!user){
+        res.status(403).json({error: "Access Denied."})
+    }
+    req.profile.salt = undefined;
+    req.profile.hashed_password = undefined;
+    res.json({
+      profile:  req.profile
+    })
+
+    next();
+}
+
+exports.isAdmin = (req, res, next) => {
+    if(req.profile.role === 0){
+        res.status(403).json({error: "Admin resouce! access denied"})
+    }
+    next();
+}
