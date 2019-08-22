@@ -50,6 +50,10 @@ userSchema
     });
 
 userSchema.methods = {
+    authenticate: function(password){
+        return this.encryptPassword(password) === this.hashed_password;
+    },
+
     encryptPassword: function(password) {
         if (!password) return "";
         try {
@@ -62,5 +66,6 @@ userSchema.methods = {
         }
     }
 };
+
 
 module.exports = mongoose.model("User", userSchema);
