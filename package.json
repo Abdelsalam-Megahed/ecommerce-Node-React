@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/Abdelsalam-Megahed/ecommerce-Node-React#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.6.10",
-    "nodemon": "^1.19.1"
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "uuid": "^3.3.3"
   }
 }
