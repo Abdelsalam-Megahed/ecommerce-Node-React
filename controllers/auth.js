@@ -63,12 +63,6 @@ exports.isAuth = (req, res, next) => {
     if(!user){
         res.status(403).json({error: "Access Denied."})
     }
-    req.profile.salt = undefined;
-    req.profile.hashed_password = undefined;
-    res.json({
-      profile:  req.profile
-    })
-
     next();
 }
 
