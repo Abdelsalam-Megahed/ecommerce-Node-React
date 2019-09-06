@@ -50,8 +50,8 @@ userSchema
     });
 
 userSchema.methods = {
-    authenticate: function(password){
-        return this.encryptPassword(password) === this.hashed_password;
+    authenticate: function(plainText) {
+        return this.encryptPassword(plainText) === this.hashed_password;
     },
 
     encryptPassword: function(password) {
@@ -66,6 +66,5 @@ userSchema.methods = {
         }
     }
 };
-
 
 module.exports = mongoose.model("User", userSchema);
